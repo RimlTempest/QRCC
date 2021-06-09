@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from "react";
+import React, { ReactElement, Suspense, useState } from "react";
 import QRCode from "qrcode.react";
 // import QrReader from 'react-qr-reader';
 // import QrReader from 'react-qr-scanner';
@@ -123,24 +123,26 @@ function Index(): ReactElement {
               {intl.formatMessage({ id: "save" })}
             </button>
             {/* TODO: lazy importをした際QR読み込みが失敗するため動くようにする */}
-            {/* <button 
+            <button 
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
               onClick={() => openConfirmDialog(true)}
             >
               {intl.formatMessage({ id: "scan" })}
-            </button> */}
+            </button>
             <ConfirmDialog
               title={intl.formatMessage({ id: "dialog.title" })}
               open={open}
               onClose={() => openConfirmDialog(false)}
             >
               <div className="mb-5">
-                <QrReader
-                  delay={300}
-                  onError={handleError}
-                  onScan={handleScan}
-                  style={{ width: '100%' }}
-                />
+                <Suspense fallback={<div>Loading...</div>}>
+                  <QrReader
+                    delay={300}
+                    onError={handleError}
+                    onScan={handleScan}
+                    style={{ width: '100%' }}
+                  />
+                </Suspense>
               </div>
               <div>
                 <span className="text-gray-700">{intl.formatMessage({ id: "dialog.detail" })}</span>
