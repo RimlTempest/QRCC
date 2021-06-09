@@ -1,0 +1,24 @@
+{
+    "title": "きゅーあーるしーしー",
+    "description": "QRCodeを生成したり読み込んだりするアプリです。",
+    "author": "@Fande4d",
+    "i18n": {
+        "ja": "日本語",
+        "en": "英語"
+    },
+    "qrCode": {
+        "text": "QRコードのテキスト",
+        "size": "QRコードのサイズ",
+        "backgroundColor": "バックグラウンドカラー",
+        "foregroundColor": "QRコードカラー",
+        "level": "QRコードの品質"
+    },
+    "dialog": {
+        "title": "QR読み取り",
+        "detail": "QRCodeの内容",
+        "error": "QRの内容取得に失敗しました。",
+        "close": "ダイアログを閉じる"
+    },
+    "scan": "QRコードをカメラで読み取る",
+    "save": "QRCodeを保存する"
+}

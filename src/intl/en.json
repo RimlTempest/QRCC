@@ -1,0 +1,24 @@
+{
+    "title": "QRCC",
+    "description": "This is an application to generate and read QRCodes.",
+    "author": "@Fande4d",
+    "i18n": {
+        "ja": "Japanese",
+        "en": "English"
+    },
+    "qrCode": {
+        "text": "Text",
+        "size": "Size",
+        "backgroundColor": "BackgroundColor",
+        "foregroundColor": "ForegroundColor",
+        "level": "Level of quality of QR Code"
+    },
+    "dialog": {
+        "title": "QR Reader",
+        "detail": "QRCode Contents",
+        "error": "Failed to obtain QR content.",
+        "close": "Close"
+    },
+    "scan": "Scan the QRCode",
+    "save": "Save the QRCode"
+}
