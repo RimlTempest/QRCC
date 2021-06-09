@@ -122,12 +122,13 @@ function Index(): ReactElement {
             >
               {intl.formatMessage({ id: "save" })}
             </button>
-            <button 
+            {/* TODO: lazy importをした際QR読み込みが失敗するため動くようにする */}
+            {/* <button 
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
               onClick={() => openConfirmDialog(true)}
             >
               {intl.formatMessage({ id: "scan" })}
-            </button>
+            </button> */}
             <ConfirmDialog
               title={intl.formatMessage({ id: "dialog.title" })}
               open={open}
