@@ -38,7 +38,7 @@ function Header(): ReactElement {
                 { intl.formatMessage({ id: "title" }) }
             </span>
             </div>
-            <div className="block lg:hidden">
+            <div className="block">
                 <Language />
             </div>
         </nav>
