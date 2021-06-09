@@ -53,6 +53,24 @@ function Index(): ReactElement {
     console.error(err);
   };
 
+  const backgroundColorBlur = (e: { target: { value: string | string[]; }; }) => {
+    if (!e.target.value.includes('#')) {
+      setBackgroundColor('#FFFFFF');
+    }
+    if (e.target.value.length < 4) {
+      setBackgroundColor('#FFFFFF');
+    }
+  };
+
+  const foregroundColorBlur = (e: { target: { value: string | string[]; }; }) => {
+    if (!e.target.value.includes('#')) {
+      setForegroundColor('#000000');
+    }
+    if (e.target.value.length < 4) {
+      setForegroundColor('#000000');
+    }
+  };
+
   const levels = ["L", "M", "Q", "H"];
 
   const downloadQRCode = () => {
@@ -100,6 +118,7 @@ function Index(): ReactElement {
             type="text"
             placeholder="#FFFFFF"
             onChange={backgroundColorChange}
+            onBlur={backgroundColorBlur}
           />
           <TextArea 
             htmlFor="fgColor"
@@ -107,6 +126,7 @@ function Index(): ReactElement {
             type="text"
             placeholder="#000000"
             onChange={foregroundColorChange}
+            onBlur={foregroundColorBlur}
           />
           <SelectBox
             htmlFor="select"

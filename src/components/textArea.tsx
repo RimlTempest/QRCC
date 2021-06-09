@@ -6,6 +6,7 @@ type Props = {
     type: string;
     placeholder: string;
     onChange: ChangeEventHandler<HTMLInputElement>;
+    onBlur?: React.FocusEventHandler<HTMLInputElement>;
 }
 
 function TextArea(props: Props): ReactElement {
@@ -22,6 +23,7 @@ function TextArea(props: Props): ReactElement {
                 type={props.type}
                 placeholder={props.placeholder}
                 onChange={props.onChange}
+                onBlur={!props.onBlur? undefined : props.onBlur}
             />
         </div>
     )
