@@ -19,6 +19,10 @@
         "error": "Failed to obtain QR content.",
         "close": "Close"
     },
+    "notfound":{
+        "message": "404 Not Found",
+        "totop": "Back"
+    },
     "scan": "Scan the QRCode",
     "save": "Save the QRCode"
 }
