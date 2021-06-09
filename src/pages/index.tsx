@@ -59,6 +59,8 @@ function Index(): ReactElement {
     }
     if (e.target.value.length < 4) {
       setBackgroundColor('#FFFFFF');
+    } else if (e.target.value.length >= 8) {
+      setBackgroundColor('#FFFFFF');
     }
   };
 
@@ -67,6 +69,8 @@ function Index(): ReactElement {
       setForegroundColor('#000000');
     }
     if (e.target.value.length < 4) {
+      setForegroundColor('#000000');
+    } else if (e.target.value.length >= 8) {
       setForegroundColor('#000000');
     }
   };
