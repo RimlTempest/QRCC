@@ -12,7 +12,7 @@ function Dialog(props: Props): ReactElement {
     }
     return (
         <div className="fixed inset-0 z-50 overflow-auto bg-gray-900 bg-opacity-25 flex">
-            <div className="relative p-8 w-full max-w-md m-auto bg-white flex-col flex rounded-lg">
+            <div className="relative p-8 w-full max-w-md m-auto bg-white flex-col flex rounded-lg ml-3 mr-3 lg:ml-auto lg:mr-auto xl:ml-auto xl:mr-auto">
                 <div>{props.children}</div>
             </div>
         </div>
