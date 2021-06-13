@@ -43,7 +43,7 @@ function SEO(props: Props): ReactElement {
                 },
                 {
                     property: `twitter:card`,
-                    content: `Summary Card`,
+                    content: `summary`,
                 },
                 {
                     property: `twitter:site`,
