@@ -26,6 +26,10 @@ function SEO(props: Props): ReactElement {
                     content: props.description,
                 },
                 {
+                    property: `og:url`,
+                    content: `https://qrcc.riml.work`
+                },
+                {
                     property: `og:type`,
                     content: `website`,
                 },
@@ -37,6 +41,14 @@ function SEO(props: Props): ReactElement {
                     property: `og:locale`,
                     content: `ja_JP`,
                 },
+                {
+                    property: `twitter:card`,
+                    content: `Summary Card`,
+                },
+                {
+                    property: `twitter:site`,
+                    content: `@Fande4d`
+                }
             ]}
         />
     )
