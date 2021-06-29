@@ -1,7 +1,5 @@
 import React, { ReactElement, Suspense, useState } from "react";
 import QRCode from "qrcode.react";
-// import QrReader from 'react-qr-reader';
-// import QrReader from 'react-qr-scanner';
 import Layout from '../components/layout';
 import SEO from '../components/SEO';
 import TextArea from '../components/textArea';
@@ -80,6 +78,11 @@ function Index(): ReactElement {
   const downloadQRCode = () => {
     // Generate download with use canvas and stream
     const canvas = document.getElementById("qrCode") as HTMLCanvasElement;
+    var ctx: CanvasRenderingContext2D | null = canvas.getContext('2d');
+    //文字のスタイルを指定
+    ctx!.font = '2px serif';
+    ctx!.fillStyle = '#000000';
+    ctx!.fillText('https://qrcc.riml.work', 3, 3, 200);
     const pngUrl = canvas!
       .toDataURL("image/png")
       .replace("image/png", "image/octet-stream");
@@ -106,6 +109,7 @@ function Index(): ReactElement {
             bgColor={backgroundColor}
             fgColor={foregroundColor}
             level={level}
+            includeMargin={true}
           />
         </div>
         <div className="mb-4 ml-4 mr-4">
@@ -124,6 +128,7 @@ function Index(): ReactElement {
             onChange={backgroundColorChange}
             onBlur={backgroundColorBlur}
           />
+          <p className="text-red-600 text-sm font-bold">※ #FFF0 を指定すると背景透過になります。</p>
           <TextArea 
             htmlFor="fgColor"
             title={intl.formatMessage({ id: "qrCode.foregroundColor" })}
