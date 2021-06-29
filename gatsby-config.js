@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: `QRCC`,
@@ -60,6 +62,12 @@ module.exports = {
         // option to redirect to `/ko` when connecting `/`
         redirect: true,
       },
+    },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: process.env.GATSBY_GOOGLE_ANALYTICS
+      }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

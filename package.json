@@ -6,6 +6,8 @@
   "author": "DaikiTakahashi",
   "dependencies": {
     "@types/react-qr-reader": "^2.1.3",
+    "dotenv": "^10.0.0",
+    "gatsby-plugin-google-analytics": "^3.8.0",
     "gatsby-plugin-intl": "^0.3.3",
     "qrcode.react": "^1.0.1",
     "react": "17.0.2",
