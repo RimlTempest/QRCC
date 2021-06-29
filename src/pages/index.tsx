@@ -193,7 +193,7 @@ function Index(): ReactElement {
               </div>
               <div>
                 <span className="text-gray-700">{intl.formatMessage({ id: "dialog.detail" })}</span>
-                <p className="text-gray-700 ml-3 mt-2">{scan}</p>
+                <p className="text-gray-700 ml-3 mt-2 whitespace-normal break-all">{scan}</p>
               </div>
             </ConfirmDialog>
           </div>
